@@ -1,0 +1,56 @@
+<igx-navbar class="navbar">
+  <igx-navbar-action>
+    <button igxRipple igxIconButton="flat" [igxToggleAction]="navDrawer">
+      <igx-icon>
+        menu
+      </igx-icon>
+    </button>
+  </igx-navbar-action>
+  <igx-navbar-title class="navbar-content">
+    <h6 class="h6">
+      App Name
+    </h6>
+  </igx-navbar-title>
+  <button igxRipple igxIconButton="flat">
+    <igx-icon>
+      search
+    </igx-icon>
+  </button>
+  <button igxRipple igxIconButton="flat">
+    <igx-icon>
+      favorite
+    </igx-icon>
+  </button>
+  <button igxRipple igxIconButton="flat">
+    <igx-icon>
+      more_vert
+    </igx-icon>
+  </button>
+</igx-navbar>
+<div class="row-layout group">
+  <igx-nav-drawer [isOpen]="true" [pin]="true" width="320px" #navDrawer class="nav-drawer">
+    <ng-template igxDrawer>
+      <div igxDrawerItem igxRipple routerLink="/view1">
+        <igx-icon class="icon">
+          home
+        </igx-icon>
+        <span>View 1</span>
+      </div>
+      <div igxDrawerItem igxRipple routerLink="/view2">
+        <igx-icon class="icon">
+          dns
+        </igx-icon>
+        <span>View 2</span>
+      </div>
+      <div igxDrawerItem igxRipple routerLink="/view3">
+        <igx-icon class="icon">
+          dashboard
+        </igx-icon>
+        <span>View 3</span>
+      </div>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="view-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
