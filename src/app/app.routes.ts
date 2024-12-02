@@ -4,6 +4,7 @@ import { UncaughtErrorComponent } from './error-routing/error/uncaught-error.com
 import { View1Component } from './view1/view1.component';
 import { View2Component } from './view2/view2.component';
 import { View3Component } from './view3/view3.component';
+import { ChildViewComponent } from './child-view/child-view.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'view1', pathMatch: 'full' },
@@ -27,6 +28,13 @@ export const routes: Routes = [
     component: View3Component,
     data: {
       text: 'View 3'
+    }
+  },
+  {
+    path: 'child-view',
+    component: ChildViewComponent,
+    data: {
+      text: 'Child View'
     }
   },
   { path: '**', component: PageNotFoundComponent } // must always be last
